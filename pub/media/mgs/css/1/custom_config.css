@@ -1,0 +1,106 @@
+@import url('//fonts.googleapis.com/css?family=Poppins:300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,900,900italic');@import url('//fonts.googleapis.com/css?family=Libre+Baskerville:300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,900,900italic');body{font-family: "Poppins", arial, tahoma;font-weight: normal;}#mainMenu{font-family: "Poppins";}
+				h1{font-family: "Poppins";}
+				h2{font-family: "Poppins";}
+				h3{font-family: "Poppins";}
+				h4{font-family: "Poppins";}
+				h5{font-family: "Poppins";}
+				h6{font-family: "Poppins";}
+				.price, .price-box .price{font-family: "Poppins";}
+				.btn{font-family: "Poppins";}
+				blockquote,.sub-title, .content-heading .block-note{font-family: "Libre Baskerville";}
+				.header{position: relative; z-index: 99;}.big-item .products-grid .product-item-info.metro_template .product-top a.photo { padding-top: calc(133.3333% - 10px) !important; }
+.products-grid .big-item .product-item-info.metro_template .product-top a.photo { padding-bottom: calc(133.3333% - 10px) !important; }@media (min-width: 1200px){.cms-index-index .header.header8 .vertical-menu-widget .vertical-menu{padding-bottom: 60px;}}.header.header9 .vertical-menu-widget .vertical-menu {padding-bottom: 31px;}
+.boxed .breadcrumbs ul.items{margin-left:15px}
+.header.header10 .mega-menu-item.megamenu-homelink .logo {background-position: 0px -74px;}
+@media (min-width: 1200px){.header.header10  .navigation .nav-main-menu {
+transform: translateX(20px); -moz-transform: translateX(20px);-webkit-transform: translateX(20px);-ms-transform: translateX(20px);}}
+@media (min-width: 1200px) {
+	body.menu_vertical_fixed .header.header5 {
+		z-index: 998;
+	}
+}
+.testimonial-list-block.default_template .testimonial-content .content blockquote {font-size: 14px;}
+.rotate-image-container .rotate-j360 {
+cursor: move;}
+@media (min-width: 1200px){
+.header:not(.header10) .nav.nav-main-menu>li.logo-item.logo-item {
+    display: table-cell !important;
+}
+}
+.mgs-quickview-catalog-product-view .product-detail-infomation.col-xs-12 {
+    height: auto !important;
+}
+ .success-ajax--popup .mfp-iframe-holder .mfp-close{top: -13px !important}
+.lazy-loading-img .page-main > div.row {
+    margin-right: 0px;
+}
+.page-layout-3columns .category-product-actions .filter-toggle,
+.page-layout-2columns-right .category-product-actions .filter-toggle,
+.page-layout-2columns-left .category-product-actions .filter-toggle {
+	display: none;
+}
+.filter .filter-title{
+	display: none;
+}
+.page-layout-1column .category-product-actions .filter-toggle {
+    float: left;
+    width: 20%;
+}
+.filter-open .page-layout-1column .category-product-actions .filter-toggle .title:after {
+	position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #000;
+    opacity: 0.8;
+    display: block;
+    content: "";
+    z-index: 998;
+}
+.page-layout-1column .category-product-actions .filter-toggle .title {
+	font-size: 36px;
+    cursor: pointer;
+    line-height: 1;
+    color: #222;
+}
+.page-layout-1column .category-product-actions .filter-toggle .title > span{
+	-moz-transform:rotate(-90deg);
+    -ms-transform:rotate(-90deg);
+    -o-transform:rotate(-90deg);
+    -webkit-transform:rotate(-90deg);
+}
+.filter-open .page-layout-1column .block.filter .block-content.filter-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -o-transform: translateX(0);
+}
+@media (max-width: 991px) {
+    .checkout-container {
+        z-index: 98;
+    }
+}
+.catalog-product-view .lazy-loading-img .page-main > div.row { 
+    margin-right: 0px;
+}
+* {
+    -webkit-overflow-scrolling: touch;
+}
+@media (min-width: 768px){
+.product-detail-infomation-sticky-parent > .col-xs-12 + div { width: 50% !important; }}
+.search-open .search-form .mgs-instant-search-dropdown{top: calc(100% + 20px)}
+.slide-text .btn-default {
+  background-color: transparent;
+}
+.slide-text .btn-default:hover {
+  background-color: #56cfe1;
+  border-color: #56cfe1;
+}
+.slide-text .text-colour-white .btn-default {
+  color: #fff;
+  border-color: #fff;
+}
+.bottom50 .fullscreen-slider .owl-carousel .item-image img,.bottom50 .fullscreen-slider .owl-carousel .item-image, .bottom50 .fullscreen-slider .owl-carousel div:not(.owl-controls):not(.slide-text){height:calc(100% - 45px);}

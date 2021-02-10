@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2015 Magento. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Cms\Model\Wysiwyg\Images\Storage">
+	    <arguments>
+	        <argument name="extensions" xsi:type="array">           
+	            <item name="allowed" xsi:type="array">
+	                <item name="glb" xsi:type="number">1</item>
+					<item name="jpg" xsi:type="number">1</item>
+					<item name="jpeg" xsi:type="number">1</item>
+					<item name="png" xsi:type="number">1</item>
+					<item name="gif" xsi:type="number">1</item>
+	            </item>
+				<item name="media_allowed" xsi:type="array">
+                    <item name="flv" xsi:type="string">video/x-flv</item>
+                    <item name="avi" xsi:type="string">video/x-msvideo</item>
+                    <item name="mov" xsi:type="string">video/x-sgi-movie</item>
+                    <item name="rm" xsi:type="string">application/vnd.rn-realmedia</item>
+                    <item name="wmv" xsi:type="string">video/x-ms-wmv</item>
+                </item>
+	        </argument>
+	    </arguments>
+    </type>
+    <preference for="Magento\Cms\Model\Wysiwyg\Images\Storage" type="MGS\ClaueTheme\Model\Cms\Wysiwyg\Images\Storage" />
+	<preference for="MGS\Mpanel\Block\Adminhtml\System\Install" type="MGS\ClaueTheme\Block\Adminhtml\System\Install" />               
+	<preference for="MGS\Mpanel\Block\Adminhtml\System\Import" type="MGS\ClaueTheme\Block\Adminhtml\System\Import" />               
+	<preference for="MGS\Mpanel\Controller\Adminhtml\Mpanel\Install" type="MGS\ClaueTheme\Controller\Adminhtml\ClaueTheme\Install" />               
+	<preference for="MGS\Mpanel\Controller\Adminhtml\Mpanel\Import" type="MGS\ClaueTheme\Controller\Adminhtml\ClaueTheme\Import" />               
+</config>
