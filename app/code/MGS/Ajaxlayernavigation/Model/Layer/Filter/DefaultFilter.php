@@ -115,6 +115,7 @@ abstract class DefaultFilter extends \Magento\Framework\DataObject implements \M
     protected function _initItems()
     {
         $itemsData = $this->_getItemsData();
+        print_r($itemsData);exit();
         $itemList = [];
         foreach ($itemsData as $itemData) {
             $itemList[] = $this->_createItem(
