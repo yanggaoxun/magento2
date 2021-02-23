@@ -17,7 +17,10 @@
         <referenceBlock name="product.brand.name" remove="true" />   
         <referenceBlock name="custom.product.detail.bottom.static.block" remove="true" />    
         <referenceBlock name="lookbook.product" remove="true" />
-		
+		<referenceBlock name="product.brand.img.sidebar" remove="true" />
+        <referenceBlock name="catalog.compare.sidebar" remove="true" />
+        <referenceBlock name="wishlist_sidebar" remove="true" />
+
 		<referenceBlock name="product.detail.info">
             <action method="setTemplate">
                 <argument name="template" xsi:type="string">Magento_Catalog::product/view/quickview/layout.phtml</argument>
