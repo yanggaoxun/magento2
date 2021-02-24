@@ -55,18 +55,15 @@
                     </div>
                     <?= $block->getChildHtml('form_additional_info') ?>
                     <div class="actions-toolbar">
-                        <div class="primary">
-                            <button type="button" class="action login primary" id="bnt-social-login-authentication">
-                                <span><?= __('Login') ?></span>
-                            </button>
-                        </div>
+
+                        <button type="button" class="action login btn btn-primary" id="bnt-social-login-authentication">
+                            <span><?= __('Login In') ?></span>
+                        </button>
+                        <a class="action remind margin-left15" href="#"><span><?= __('Forgot Your Password?') ?></span></a>
                     </div>
                     <div class="actions-toolbar">
                         <div class="primary">
                             <a class="action create" href="#"><span><?= __('Create New Account?') ?></span></a>
-                        </div>
-                        <div class="secondary">
-                            <a class="action remind" href="#"><span><?= __('Forgot Your Password?') ?></span></a>
                         </div>
                     </div>
                 </fieldset>
