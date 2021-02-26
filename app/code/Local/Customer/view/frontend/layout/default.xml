@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+
+        <block class="Local\Customer\Block\Account\RegisterLink" name="register-link1">
+            <arguments>
+                <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
+            </arguments>
+        </block>
+        <move element="register-link1" destination="top.links"/>
+        <referenceBlock name="register-link" remove="true" ></referenceBlock>
+    </body>
+</page>
