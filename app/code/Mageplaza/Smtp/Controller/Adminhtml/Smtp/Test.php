@@ -156,7 +156,7 @@ class Test extends Action
                     'content' => __('Sent successfully! Please check your email box.')
                 ];
             } catch (Exception $e) {
-                
+
                 $result['content'] = $e->getMessage();
                 $this->logger->critical($e);
             }
