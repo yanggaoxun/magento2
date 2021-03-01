@@ -133,7 +133,7 @@ class Test extends Action
             if ($params['returnpath']) {
                 $config['return_path'] = $params['returnpath'];
             }
-            print_r($config);exit();
+
             $this->mailResource->setSmtpOptions(Store::DEFAULT_STORE_ID, $config);
 
             $from = $this->senderResolver->resolve(
@@ -156,6 +156,7 @@ class Test extends Action
                     'content' => __('Sent successfully! Please check your email box.')
                 ];
             } catch (Exception $e) {
+                
                 $result['content'] = $e->getMessage();
                 $this->logger->critical($e);
             }
