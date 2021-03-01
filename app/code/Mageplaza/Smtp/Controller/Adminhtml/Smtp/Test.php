@@ -133,7 +133,7 @@ class Test extends Action
             if ($params['returnpath']) {
                 $config['return_path'] = $params['returnpath'];
             }
-
+            print_r($config);exit();
             $this->mailResource->setSmtpOptions(Store::DEFAULT_STORE_ID, $config);
 
             $from = $this->senderResolver->resolve(
