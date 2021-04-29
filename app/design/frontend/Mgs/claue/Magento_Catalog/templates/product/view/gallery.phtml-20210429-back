@@ -58,7 +58,7 @@
 <input id="view_type" type="hidden" name="view_type" value="<?php echo $block->getViewType(); ?>">
 
 <div class="xxx product media<?php if($glrTemplate == 1): ?> product-gallery-grid<?php endif ?>">
-    <?php if((count($galleryImages) >= 1) || ($glrTemplate == 6)): ?>
+    <?php if((count($galleryImages) >1) || ($glrTemplate == 6)): ?>
         <?php echo $this->getLayout()
                         ->createBlock('Magento\Framework\View\Element\Template')
                         ->setProduct($_product)
@@ -71,6 +71,33 @@
                         ->setViewType($block->getViewType())
                         ->setTemplate('Magento_Catalog::product/view/gallery/gallery_'.$glrTemplate.'.phtml')
                         ->toHtml(); ?>
+    <?php elseif(count($galleryImages) == 1): ?>
+        <?php foreach($galleryImages as $image): ?>
+        <?php $dataArrayImg =  $image->toArray();
+        ?>
+            <?php 
+                $lbImage = (isset($dataArrayImg['label']) &&  $dataArrayImg['label'] != null) ? $dataArrayImg['label'] : $_product->getName();
+             ?>
+            <div class="product single-image item-image base-image imgzoom" data-zoom="<?php echo $image->getImageZoom(); ?>">
+                <?php if($lbox_image): ?>
+                    <?php if($image->getMediaType() != 'external-video'): ?>
+                        <a class="lb" href="<?php echo $image->getImageZoom(); ?>"><img class="img-responsive" src="<?php echo $image->getLargeImageUrl(); ?>" alt="<?php echo $lbImage ?>"/></a>
+                    <?php else: ?>
+                        <a class="lb video-link" href="<?php echo $image->getVideoUrl(); ?>"><img class="img-responsive" src="<?php echo $image->getLargeImageUrl(); ?>" alt="<?php echo $lbImage ?>"/></a>
+                    <?php endif ?>
+                <?php else: ?>
+                    
+                    <?php if($image->getMediaType() == 'external-video'): ?>
+                        <a href="<?php echo $image->getVideoUrl(); ?>"></a>
+                    <?php endif ?>
+                <?php endif ?>
+            </div>
+        <?php endforeach ?>
+        <?php if($zoom_image): ?>
+        <script type="text/javascript">
+            require([ 'jquery', 'zoom-images' ],function($) { zoomElement('.imgzoom'); });
+        </script>
+        <?php endif ?>
     <?php else: ?>
         <?php // Product no image ?>
         <?php $lbImage = $_product->getName(); ?>
