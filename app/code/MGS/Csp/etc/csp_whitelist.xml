@@ -47,6 +47,7 @@
                 <value id="lightemporium" type="host">*.lightemporium.com</value>                
                 <value id="usercentrics" type="host">*.usercentrics.eu</value>
                 <value id="isharethis" type="host">*.sharethis.com</value>
+                <value id="magesolution" type="host">*.magesolution.com/</value>
             </values>
         </policy>
         <policy id="connect-src">
