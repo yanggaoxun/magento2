@@ -5,12 +5,12 @@
     <title>Title</title>
 </head>
 <body>
-测试
+测试V1
 </body>
 
 
 <script type="text/javascript">
-    if (window.ApplePaySession) {
+    if (window.ApplePaySession && ApplePaySession.canMakePayments()) {
 // The Apple Pay JS API is available.
         prompt('222');
     }
