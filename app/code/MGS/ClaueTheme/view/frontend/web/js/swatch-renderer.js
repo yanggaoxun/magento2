@@ -250,7 +250,7 @@ define([
                     lazyLoad: false,
                     nav: true,
                     dots: false,
-                    navText: [$.mage.__('Prev'), $.mage.__('Next')],
+                    navText: ["<span class='fa fa-angle-left'></span>", "<span class='fa fa-angle-right'></span>"],
                     rtl: RTL,
                 });
 
