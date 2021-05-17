@@ -158,6 +158,72 @@ define([
                     this.updateBaseImage(images, $main, !this.inProductList, eventName);
                 }
             },
+
+
+            /**
+             * Event for swatch options
+             *
+             * @param {Object} $this
+             * @param {Object} $widget
+             * @private
+             */
+            _OnClick: function ($this, $widget) {
+                var $parent = $this.parents('.' + $widget.options.classes.attributeClass),
+                    $wrapper = $this.parents('.' + $widget.options.classes.attributeOptionsWrapper),
+                    $label = $parent.find('.' + $widget.options.classes.attributeSelectedOptionLabelClass),
+                    attributeId = $parent.data('attribute-id'),
+                    $input = $parent.find('.' + $widget.options.classes.attributeInput),
+                    checkAdditionalData = JSON.parse(this.options.jsonSwatchConfig[attributeId]['additional_data']),
+                    $priceBox = $widget.element.parents($widget.options.selectorProduct)
+                        .find(this.options.selectorProductPrice);
+
+                if ($widget.inProductList) {
+                    $input = $widget.productForm.find(
+                        '.' + $widget.options.classes.attributeInput + '[name="super_attribute[' + attributeId + ']"]'
+                    );
+                }
+
+                if ($this.hasClass('disabled')) {
+                    return;
+                }
+
+                if ($this.hasClass('selected')) {
+                    return ;
+                    /*
+                    $parent.removeAttr('data-option-selected').find('.selected').removeClass('selected');
+                    $input.val('');
+                    $label.text('');
+                    $this.attr('aria-checked', false);
+                     */
+                } else {
+                    $parent.attr('data-option-selected', $this.data('option-id')).find('.selected').removeClass('selected');
+                    $label.text($this.data('option-label'));
+                    $input.val($this.data('option-id'));
+                    $input.attr('data-attr-name', this._getAttributeCodeById(attributeId));
+                    $this.addClass('selected');
+                    $widget._toggleCheckedAttributes($this, $wrapper);
+                }
+
+                $widget._Rebuild();
+
+                if ($priceBox.is(':data(mage-priceBox)')) {
+                    $widget._UpdatePrice();
+                }
+
+                $(document).trigger('updateMsrpPriceBlock',
+                    [
+                        this._getSelectedOptionPriceIndex(),
+                        $widget.options.jsonConfig.optionPrices,
+                        $priceBox
+                    ]);
+
+                if (parseInt(checkAdditionalData['update_product_preview_image'], 10) === 1) {
+                    $widget._loadMedia();
+                }
+
+                $input.trigger('change');
+            },
+
             /**
              * Update [gallery-placeholder] or [product-image-photo]
              * @param {Array} images
