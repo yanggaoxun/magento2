@@ -2647,8 +2647,13 @@ body:not(.cms-index-index) .header {
 				a {
 					color: #222;
 					font-size: 14px;
-					line-height: 1.1;
+					line-height: 1.4;
 					font-weight: 500;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 3;
 					&:hover {
 						color: @base-color;
 					}
