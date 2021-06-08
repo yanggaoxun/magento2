@@ -1,4 +1,4 @@
-@base-color : #56cfe1;
+.product-item-name@base-color : #56cfe1;
 @import 'third-party_extension/_IWD_Opc.less';
 @import 'third-party_extension/_Mageplaza_Osc.less';
 @import 'third-party_extension/Webkul_Marketplace.less';
@@ -2402,11 +2402,17 @@ body:not(.cms-index-index) .header {
 			padding-top: 11px;
 			.product-item-name {
 				margin-bottom: 6px;
-				line-height: 1.1;
+				line-height: 1.4;
 				a {
 					color: #222;
 					font-size: 14px;
 					font-weight: 500;
+					overflow: hidden;
+					text-overflow: ellipsis;
+					display: -webkit-box;
+					-webkit-box-orient: vertical;
+					-webkit-line-clamp: 3;
+
 					&:hover {
 						color: @base-color;
 					}
