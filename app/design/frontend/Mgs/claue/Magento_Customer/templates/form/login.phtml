@@ -15,10 +15,13 @@
  * @see \Magento\Customer\Block\Form\Login
  * @var $block \Magento\Customer\Block\Form\Login
  */
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$newCustomerBlock = $objectManager->create('Magento\Customer\Block\Form\Login\Info');
 ?>
-<div class="block block-customer-login">
-    <div class="block-title">
-		<h2 class="title" id="block-customer-login-heading" role="heading" aria-level="2"><span><?php /* @escapeNotVerified */ echo __('Registered Customers') ?></span></h2>
+<div class="block block-customer-login col-sm-4 col-sm-offset-4">
+    <div class="block-title t-a-c">
+		<h2 class="title margin-bottom10" id="block-customer-login-heading" role="heading" aria-level="2"><span><?php /* @escapeNotVerified */ echo __('Registered Customers') ?></span></h2>
+        <p class="margin-bottom30"><?php /* @escapeNotVerified */ echo __('Enter your e-mail and password') ?></p>
     </div>
     <div class="block-content" aria-labelledby="block-customer-login-heading">
         <form class="form form-login"
@@ -28,27 +31,32 @@
               data-mage-init='{"validation":{}}'>
             <?php echo $block->getBlockHtml('formkey'); ?>
             <fieldset class="fieldset login" data-hasrequired="<?php /* @escapeNotVerified */ echo __('* Required Fields') ?>">
-                <div class="field note margin-bottom10"><?php /* @escapeNotVerified */ echo __('If you have an account, sign in with your email address.') ?></div>
+                <!--<div class="field note margin-bottom10 t-a-c"><?php /* @escapeNotVerified */ echo __('Enter your e-mail and password') ?></div>-->
                 <div class="form-group email required">
 					<div class="form-group">
-						<label for="login[username]" class="required"><?php echo __('Email Address'); ?><em>*</em></label>
+						<!--<label for="login[username]" class="required"><?php echo __('Email Address'); ?><em>*</em></label>-->
 						<div class="control">
-							<input name="login[username]" value="<?php echo $block->escapeHtml($block->getUsername()) ?>" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> id="email" type="email" class="input-text" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
+							<input name="login[username]" placeholder="<?php echo __('Email Address'); ?>" value="<?php echo $block->escapeHtml($block->getUsername()) ?>" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> id="email" type="email" class="input-text" title="<?php /* @escapeNotVerified */ echo __('Email') ?>" data-validate="{required:true, 'validate-email':true}">
 						</div>	
 					</div>
                 </div>
                 <div class="form-group password required">
 					<div class="form-group">
-						<label for="login[username]" class="required"><?php echo __('Password'); ?><em>*</em></label>
+						<!--<label for="login[username]" class="required"><?php echo __('Password'); ?><em>*</em></label>-->
 						<div class="control">
-							<input name="login[password]" placeholder="Password" type="password" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> class="input-text" id="pass" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true}">
+							<input name="login[password]" placeholder="<?php echo __('Password'); ?>" type="password" <?php if ($block->isAutocompleteDisabled()) :?> autocomplete="off"<?php endif; ?> class="input-text" id="pass" title="<?php /* @escapeNotVerified */ echo __('Password') ?>" data-validate="{required:true}">
 						</div>
 					</div>
                 </div>
                 <?php echo $block->getChildHtml('form_additional_info'); ?>
                 <div class="actions-toolbar padding-top10">
-                    <button type="submit" class="action login btn btn-primary" name="send" id="send2"><span><?php /* @escapeNotVerified */ echo __('Sign In') ?></span></button>
-                    <a class="margin-left15 action remind" href="<?php /* @escapeNotVerified */ echo $block->getForgotPasswordUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Forgot Your Password?') ?></span></a>
+                    <button type="submit" class="action login login-btn btn-primary" name="send" id="send2"><span><?php /* @escapeNotVerified */ echo __('Sign In') ?></span></button>
+                    <!--<a class="margin-left15 action remind" href="<?php /* @escapeNotVerified */ echo $block->getForgotPasswordUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Forgot Your Password?') ?></span></a>-->
+                </div>
+
+                <div class="margin-top20 new-pwd-link">
+                    <p><?php /* @escapeNotVerified */ echo __('Lost password?') ?><a class="margin-left5 action remind" href="<?php /* @escapeNotVerified */ echo $block->getForgotPasswordUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Recover password') ?></span></a></p>
+                    <p><?php /* @escapeNotVerified */ echo __('New customer?') ?><a class="margin-left5 action remind" href="<?php /* @escapeNotVerified */ echo $newCustomerBlock->getCreateAccountUrl() ?>"><span><?php /* @escapeNotVerified */ echo __('Create your account') ?></span></a></p>
                 </div>
             </fieldset>
         </form>

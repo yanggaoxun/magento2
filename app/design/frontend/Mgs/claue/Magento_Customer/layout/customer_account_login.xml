@@ -8,11 +8,11 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
 		<referenceContainer name="customer.login.container">
-			<container name="customer.login.container.before" htmlTag="div" htmlClass="col-sm-6 col-xs-12 margin-bottom50" before="-"/>
-			<container name="customer.login.container.after" htmlTag="div" htmlClass="col-sm-6 col-xs-12 pull-right" after="customer.login.container.before"/>
+			<container name="customer.login.container.before" htmlTag="div" htmlClass="col-sm-12 col-xs-12 margin-bottom50" before="-"/>
+			<!--<container name="customer.login.container.after" htmlTag="div" htmlClass="col-sm-6 col-xs-12 pull-right" after="customer.login.container.before"/>-->
 		</referenceContainer>
-		
+		<referenceBlock name="customer.new" remove="true"></referenceBlock>
 		<move element="customer_form_login" destination="customer.login.container.before"/>
-		<move element="customer.new" destination="customer.login.container.after"/>
+		<!--<move element="customer.new" destination="customer.login.container.after"/>-->
     </body>
 </page>
