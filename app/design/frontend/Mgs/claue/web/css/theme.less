@@ -248,6 +248,25 @@ div.mage-error {
 		margin-top: 5px;
 	}
 }
+.password-very-strong,.password-strong{
+	.password-strength-meter{
+		background-color: #12cea4 !important;
+		color:#fff !important;
+	}
+}
+
+.password-weak{
+	.password-strength-meter{
+		background-color: #D24D57 !important;
+		color:#fff !important;
+	}
+}
+.password-medium{
+	.password-strength-meter{
+		background-color: #EB7347 !important;
+		color:#fff !important;
+	}
+}
 
 .password-strength-meter {
     background-color: #f4f4f4;
@@ -3716,6 +3735,20 @@ body:not(.page-layout-1column) .category-product-actions .toolbar.toolbar-produc
 		}
 	}
 }
+.form-create-account{
+	.create-accout-btn{
+		width: 100%;
+		line-height: 40px;
+		border-radius: 2px;
+	}
+	.new-pwd-link{
+		p{
+			a{
+				color:#56cfe1;
+			}
+		}
+	}
+}
 
 .login-container .block .block-title h2,
 .form-create-account h2 {
@@ -3723,9 +3756,6 @@ body:not(.page-layout-1column) .category-product-actions .toolbar.toolbar-produc
     text-transform: uppercase;
     font-weight: bold;
     //margin: 0 0 20px;
-}
-.form-create-account .fieldset + .fieldset  {
-	margin-top: 50px;
 }
 .customer-name-fields .field {
 	margin-bottom: 15px;
