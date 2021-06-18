@@ -5,7 +5,7 @@
 
         <block class="Local\Customer\Block\Account\RegisterLink" name="register-link1">
             <arguments>
-                <argument name="label" xsi:type="string" translate="true">Create an Account</argument>
+                <argument name="label" xsi:type="string" translate="true">Sign Up</argument>
             </arguments>
         </block>
         <move element="register-link1" destination="top.links"/>
