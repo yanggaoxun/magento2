@@ -1906,7 +1906,6 @@ dl.product.options.list {
 					font-size: 20px;
 					color: #fff;
 					box-shadow: none;
-					letter-spacing: 2px;
 					max-width:550px;
 				}
 				.button {
@@ -9713,9 +9712,9 @@ body > .loading-mask {
 		display: none;
 	}
 	.form-search{
-		max-width: 500px;
+		max-width: 400px;
 		position: absolute;
-		top: calc(~'100% + 5px');
+		top: calc(~'100% + 2px');
 		left: auto;
 		right: 0;
 		bottom: 0;
@@ -9736,14 +9735,15 @@ body > .loading-mask {
 			margin-top: 0;
 			.input-text {
 				color: #000;
-				height: 50px;
+				height: 42px;
 				padding-right: 5px;
 				background-color: #fff;
-				border: 1px solid #888;
+				border: 5px solid #56cfe1;
 				text-align: left;
 				padding-left: 30px;
 				padding-right: 45px;
 				font-size: 16px;
+
 			}
 			.button{
 				/* opacity: 1; */
@@ -9767,6 +9767,23 @@ body > .loading-mask {
   opacity: 1;
   visibility: visible;
 }
+.header:not(.header5):not(.header8):not(.header9) .search-form.not-full .action-search  .pe-7s-search:after{
+	content: "";
+	position: absolute;
+	z-index: 7;
+	display: none;
+	left: 2px;
+	top: 38px;
+	width: 25px;
+	height: 25px;
+	border: 11px solid transparent;
+	border-bottom-color: inherit;
+	color:#56cfe1;
+}
+.search-open .header:not(.header5):not(.header8):not(.header9) .search-form.not-full .action-search  .pe-7s-search:after{
+	display:inline-block !important;
+}
+
 /* input se IOS */
 .header .search-form.select-search .form-search .form.minisearch{
 	display: block;

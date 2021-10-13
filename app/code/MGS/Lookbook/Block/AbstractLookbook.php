@@ -61,11 +61,14 @@ abstract class AbstractLookbook extends \Magento\Framework\View\Element\Template
 				$html .= '<span class="pin-label">'. $pin['label'] .'</span>';
 				
 				if(trim($pin['custom_text'])!=''){
+				    
 					if(trim($pin['custom_label'])!=''){
 						$pinTitle = $pin['custom_label']; 
 					}elseif($product = $this->getProductInfo($pin['text'])){
 						$pinTitle = $product->getName();
-					}
+					}else{
+                        $pinTitle ='';
+                    }
 					$html .= '<div class="pin__title">'.$pinTitle.'</div>';
 					$html .= '<div class="pin__popup pin__popup--'.$pin['position'].' pin__popup--fade pin__popup_text_content" style="width:'.($productImageWidth + 60).'px"><div class="popup__title">'.$pinTitle.'</div><div class="popup__content">'.$pin['custom_text'].'</div></div>';
 				}else{

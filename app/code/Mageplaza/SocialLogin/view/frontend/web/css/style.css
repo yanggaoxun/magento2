@@ -24,7 +24,7 @@
     background: #FFF;
     padding: 0;
     width: auto;
-    max-width: 600px;
+    max-width: 450px;
     margin: 0 auto;
 }
 
@@ -85,22 +85,13 @@
 }
 
 .social-login-title h2 {
-    margin: 0;
-    padding-left: 40px;
-    background: no-repeat 12px center;
+    text-align:center;
     color: #ffffff;
+    font-size:24px;
 }
 
-.social-login-title .login-title {
-    background-image: url(images/login-title.png);
-}
-
-.social-login-title .create-account-title {
-    background-image: url(images/create-account-title.png);
-}
-
-.social-login-title .forgot-pass-title {
-    background-image: url(images/forgot-pass-title.png);
+.social-login .create,.social-login .login,.social-login .send{
+    width:100%;
 }
 
 #social-login-popup .mfp-close {
