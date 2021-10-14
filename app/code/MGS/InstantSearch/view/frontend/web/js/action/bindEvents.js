@@ -69,17 +69,17 @@ define([
                 searchButton = $(self.searchButtonSelector),
                 searchButtonDisabled = (searchField.val().length > 0) ? false : true;
 
-            searchButton.attr('disabled', searchButtonDisabled);
+                searchButton.attr('disabled', searchButtonDisabled);
         },
 
         spinnerShow: function () {
             var spinner = $(this.searchFormSelector);
-            spinner.addClass('loading');
+            //spinner.addClass('loading');
         },
 
         spinnerHide: function () {
             var spinner = $(this.searchFormSelector);
-            spinner.removeClass('loading');
+            //spinner.removeClass('loading');
         }
 
     });
