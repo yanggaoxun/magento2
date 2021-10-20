@@ -3,8 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
+<script  type="text/javascript"   src="http://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
 <body>
-yanggaoxun
+<button id="test">点击</button>
+<a href="test.html">a</a>
 </body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#test").click(function(){
+            window.location.href = "test.html";
+        });
+    });
+
+</script>
 </html>
