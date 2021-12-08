@@ -41,7 +41,11 @@
         </referenceContainer>
 		<move element="checkout.cart.totals.container" before="-" destination="cart.bottom.col2"/>
 		<move element="cart.summary" destination="cart.bottom.col2" after="checkout.cart.totals.container"/>
-		<move element="checkout.cart.shipping" destination="cart.bottom.border"/>
+		<!--<move element="checkout.cart.shipping" destination="cart.bottom.border"/>-->
+		<!--
 		<move element="checkout.cart.coupon" destination="cart.bottom.border" after="checkout.cart.shipping"/>
+		-->
+		<move element="checkout.cart.coupon" destination="cart.summary" after="checkout.cart.shipping"/>
+		<move element="checkout.cart.shipping" destination="cart.summary" before="-"/>
     </body>
 </page>
