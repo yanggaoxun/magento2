@@ -921,9 +921,7 @@ body.cms-index-index .message > div {
 		> div {
 			width: 38px;
 			height: 38px;
-			.border-radius(50%);
 			color: #222;
-			border: 2px solid #222;
 			background: none;
 			font-size: 30px;
 			text-align: center;
@@ -943,26 +941,18 @@ body.cms-index-index .message > div {
 				display: block;
 			}
 			&:not(.disabled):hover {
-				background-color: @base-color;
+				background-color: #ff4747;
 				color: #fff;
-				border-color: @base-color;
 			}
 			&.disabled {
-				/*
-				color: #c2c2c2;
-				border-color: #c2c2c2;
-				cursor: auto;
-				pointer-events: none;
-				opacity: 0.4;
-				 */
 				display:none;
 
 			}
 			&.owl-prev {
-				left: 30px;
+				left: 0px;
 			}
 			&.owl-next {
-				right: 30px;
+				right: 0px;
 			}
 		}
 	}
@@ -8495,6 +8485,10 @@ body:not(.page-layout-1column) {
     }
     .item-thumb {
         position: relative;
+		border:1px solid #ddd;
+		&.active{
+			border:2px solid #222;
+		}
         &:after {
             content: "";
             display: block;
