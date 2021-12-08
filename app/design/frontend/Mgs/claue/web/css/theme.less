@@ -1264,9 +1264,10 @@ ul {
 		color: #000;
 		display: block;
 		line-height: 1;
+		font-weight:600;
 		> .counter.qty {
 			color: #fff;
-			background-color: #222;
+			background-color: #ff4747;
 			text-align: center;
 			white-space: normal;
 			position: absolute;
@@ -1354,7 +1355,7 @@ ul {
 		line-height: 50px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		background: #000;
+		background: #56cfe1;
 		color: #fff;
 		text-align: center;
 		font-weight: 600;
@@ -1402,7 +1403,7 @@ ul {
 				text-transform: uppercase;
 			}
 			.price-container .price {
-				color: #2a2a2a;
+				color: #ff1d25;
 				font-size: 18px;
 				font-weight: 600;
 			}
@@ -1483,7 +1484,7 @@ ul {
 			.product-item-pricing {
 				margin-top: 4px;
 				.price {
-					color: #2a2a2a;
+					color: #ff1d25;
 					font-size: 14px;
 				}
 			}
@@ -1496,9 +1497,9 @@ ul {
 			.cart-item-qty {
 				width: 80px;
 				height: 34px;
-				border-radius: 17px;
 				line-height: 1;
-				padding: 0;
+				border-radius:5px;
+				color:#222;
 				text-align: center;
 			}
 			.update-cart-item {
@@ -1778,6 +1779,9 @@ dl.product.options.list {
 			&:hover {
 				color: @base-color;
 			}
+			i{
+				font-weight:600;
+			}
 		}
 		.dropdown-menu {
 			min-width: 0px;
@@ -1835,6 +1839,9 @@ dl.product.options.list {
 			&:hover {
 				color: @base-color;
 			}
+			i{
+				font-weight:600;
+			}
 		}
 		.count-wl {
 			color: #fff;
@@ -1861,6 +1868,9 @@ dl.product.options.list {
 			display: block;
 			&:hover {
 				color: @base-color;
+			}
+			i{
+				font-weight:600;
 			}
 		}
 		.form-search {
@@ -6148,15 +6158,17 @@ form.payments > .fieldset {
 	}
 	#shopping-cart-table {
 		margin: 0;
-		thead tr th {
-			color: #fff;
-			font-weight: 400;
-			font-size: 16px;
-			text-align: center;
-			border: 1px solid #eaeaea;
-			vertical-align: middle;
-			padding: 14px 30px 11px;
-			border-bottom: none;
+		thead {
+			background:#56cfe1;
+			tr th {
+				color: #fff;
+				font-weight: 400;
+				font-size: 16px;
+				text-align: center;
+				vertical-align: middle;
+				padding: 14px 30px 11px;
+				border-bottom: none;
+			}
 		}
 		tbody {
 			border-top: 1px solid #eaeaea;
@@ -6166,11 +6178,9 @@ form.payments > .fieldset {
 			tr {
 				td {
 					vertical-align: middle;
-					border: 1px solid #eaeaea;
 					padding: 25px 15px;
 					text-align: center;
-					border-bottom: none !important;
-					border-top: none !important;
+					border-top:none;
 					&.col.item {
 						padding-left: 33px;
 						text-align: left;
@@ -6273,7 +6283,7 @@ form.payments > .fieldset {
 				}
 				&.item-actions td {
 					padding: 0 0 25px;
-					text-align: left;
+					text-align: right;
 					> .actions-toolbar {
 						padding: 15px 33px 0;
 						border-top: 1px dotted #ddd;
@@ -6311,7 +6321,6 @@ form.payments > .fieldset {
 			color: #2a2a2a;
 		}
 		.gift-options-cart-item {
-			border-bottom: 1px solid #f0f0f0;
 			margin-bottom: 15px;
 			padding-bottom: 9px;
 			.action-gift {
