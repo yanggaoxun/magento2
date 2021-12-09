@@ -10,10 +10,6 @@
 ?>
 <?php $mergedCells = ($this->helper('Magento\Tax\Helper\Data')->displayCartBothPrices() ? 2 : 1); ?>
 <?php echo $block->getChildHtml('form_before') ?>
-<!--
-<?php echo $block->getChildHtml('checkout.cart.totals.container'); ?>
-<?php echo $block->getChildHtml('cart.summary');?>
--->
 <form action="<?php /* @escapeNotVerified */ echo $block->getUrl('checkout/cart/updatePost') ?>"
           method="post"
           id="form-validate"

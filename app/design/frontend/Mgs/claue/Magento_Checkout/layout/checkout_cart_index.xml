@@ -39,17 +39,14 @@
 				</referenceContainer>
 			</referenceBlock>
         </referenceContainer>
-		<!--
-		<move element="checkout.cart.totals.container" before="-" destination="cart.bottom.col2"/>
-		<move element="cart.summary" destination="cart.bottom.col2" after="checkout.cart.totals.container"/>
-		<move element="checkout.cart.shipping" destination="cart.bottom.border"/>
-		<move element="checkout.cart.coupon" destination="cart.bottom.border" after="checkout.cart.shipping"/>
-		-->
 
 		<move element="cart.summary" destination="checkout.cart.container" before="-" />
-		<move element="checkout.cart.totals.container" destination="cart.summary" before="-"/>
-		<move element="checkout.cart.shipping" destination="cart.summary" after="heckout.cart.totals.container"/>
+		<move element="checkout.cart.summary.title" destination="cart.summary" before="-" />
+		<move element="checkout.cart.shipping" destination="cart.summary" after="checkout.cart.summary.title"/>
 		<move element="checkout.cart.coupon" destination="cart.summary" after="checkout.cart.shipping"/>
+		<move element="checkout.cart.totals.container" destination="cart.summary" after="checkout.cart.coupon"/>
+
+
 
     </body>
 </page>
