@@ -6230,8 +6230,12 @@ form.payments > .fieldset {
 						}
 					}
 					&.col.qty {
+						text-align: right;
 						a{
 							margin-left:15px;
+							span{
+								font-size:20px;
+							}
 						}
 						.label {
 							display: none;
@@ -6241,7 +6245,7 @@ form.payments > .fieldset {
 							font-size: 14px;
 							height: 40px;
 							margin-bottom: 0;
-							text-align: center;
+
 							margin: 0 auto;
 							width: 100px;
 							display: flex;
@@ -6257,17 +6261,10 @@ form.payments > .fieldset {
 								color: #2a2a2a;
 							}
 							> span {
-								display: inline-block;
-								padding: 5px 2px;
-								font-size: 16px;
+								padding: 3px 9px;
+								background: #eee;
+								border-radius: 50%;
 								cursor: pointer;
-								
-								&.minus {
-									padding-left: 15px;
-								}
-								&.plus {
-									padding-right: 15px;
-								}
 							}
 						}
 					}
@@ -6305,15 +6302,18 @@ form.payments > .fieldset {
 			}
 		}
 		.cart-price .price {
-			color: #7b7b7b;
-			font-size: 16px;
+			color: #ff4747;
+			font-size: 14px;
 		}
-		.subtotal .cart-price .price {
-			color: #2a2a2a;
+		.subtotal {
+			margin-top:30px;
+			.cart-price .price {
+				font-weight:500;
+				font-size:16px;
+			}
 		}
+
 		.gift-options-cart-item {
-			margin-bottom: 15px;
-			padding-bottom: 9px;
 			.action-gift {
 				color: #222;
 				font-size: 16px;
