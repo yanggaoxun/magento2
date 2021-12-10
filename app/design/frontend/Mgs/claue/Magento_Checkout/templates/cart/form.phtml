@@ -22,6 +22,7 @@
                data-mage-init='{"shoppingCart":{"emptyCartButton": "action.clear",
                "updateCartActionContainer": "#update_cart_action_container"}}'>
             <caption role="heading" aria-level="2" class="table-caption"><?php /* @escapeNotVerified */ echo __('Shopping Cart Items') ?></caption>
+            <!--
             <thead>
                 <tr>
                     <th class="col item" scope="col"><span><?php /* @escapeNotVerified */ echo __('Product') ?></span></th>
@@ -30,6 +31,7 @@
                     <th class="col subtotal" scope="col"><span><?php /* @escapeNotVerified */ echo __('Subtotal') ?></span></th>
                 </tr>
             </thead>
+            -->
             <?php foreach ($block->getItems() as $_item): ?>
                 <?php echo $block->getItemHtml($_item) ?>
             <?php endforeach ?>
