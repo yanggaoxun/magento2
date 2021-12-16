@@ -96,11 +96,12 @@
 		<ul class="actions-link">
 		
 			<?php // QuickView  ?>
+            <!--
 			<li class="<?php if ($themeHelper->getStoreConfig('mgs_quickview/general/enabled_mobile')== 0): ?>hidden-sm hidden-xs <?php else: ?>quickview-mobile <?php endif ?>">
 				<?php $quickViewHelper = $this->helper('MGS\QuickView\Helper\Data'); ?>
 				<?php echo $quickViewHelper->aroundQuickViewHtml($_product); ?>
 			</li>
-			
+			-->
 			<?php // Wishlist  ?>
 			<?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow() && !$themeSettings['catalog']['wishlist_button']): ?>
 				<li>
@@ -254,7 +255,12 @@
 				</div>
 			<?php endif ?>
 		<?php endif ?>
-		
-		
 	</div>
+    <!-- roy  start -->
+
+        <?php $quickViewHelper = $this->helper('MGS\QuickView\Helper\Data'); ?>
+        <?php echo $quickViewHelper->aroundQuickViewHtml($_product); ?>
+
+
+    <!-- roy  end -->
 </div>

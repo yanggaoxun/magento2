@@ -1,5 +1,5 @@
 @base-color : #56cfe1;
-@base-button-color : #ff4747;
+@base-button-color : #222529;
 
 @import 'third-party_extension/_IWD_Opc.less';
 @import 'third-party_extension/_Mageplaza_Osc.less';
@@ -194,31 +194,33 @@ button { .transition(all 300ms); }
 	color: #222;
 	border: 2px solid #222;
 	background-color: #fff;
-	&:hover, &:focus, &:active {
-		color: #fff;
-		border: 2px solid #222;
-		background-color: #222;
-	}
+
 }
 .btn-default2 {
 	color: #fff;
 	border: 2px solid #fff;
 	background-color: transparent;
-	&:hover, &:focus, &:active {
-		color: #fff;
-		border: 2px solid @base-color;
-		background-color: @base-color;
-	}
+
 }
 .btn-primary {
 	color: #fff;
 	border: 1px solid @base-button-color;
 	background-color: @base-button-color;
+	&:hover, &:focus, &:active {
+		color: #fff;
+		border: 1px solid @base-button-color;
+		background-color: @base-button-color;
+	}
 }
 .btn-secondary {
 	color: #fff;
-	border: 2px solid @base-color;
-	background-color: @base-color;
+	border: 2px solid @base-button-color;
+	background-color: @base-button-color;
+	&:hover, &:focus, &:active {
+		color: #fff;
+		border: 1px solid @base-button-color;
+		background-color: @base-button-color;
+	}
 }
 .btn-full {
     width: 100%
@@ -1296,7 +1298,7 @@ ul {
 		&:before {
 			-webkit-font-smoothing: antialiased;
 			font-size: 24px;
-			content: "\e615";
+			content: "\e66e";
 			font-family: 'Pe-icon-7-stroke';
 			overflow: hidden;
 			speak: none;
@@ -1350,7 +1352,7 @@ ul {
 		line-height: 50px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		background: #56cfe1;
+		background: #222529;
 		color: #fff;
 		text-align: center;
 		font-weight: 600;
@@ -2451,7 +2453,7 @@ body:not(.cms-index-index) .header {
 			color: #fff;
 			line-height: 40px;
 			white-space: nowrap;
-			background-color: #222;
+			background-color: #514943;
 			width:100%;
 			text-align: center;
 			border: none;
@@ -2465,9 +2467,19 @@ body:not(.cms-index-index) .header {
 				line-height: 1;
 			}
 			&:hover {
-				background-color: #56cfe1;
+				background-color: #222529;
 				color: #fff;
 			}
+		}
+
+		.action.mgs-quickview{
+			margin-top:10px;
+			border:1px solid #222529;
+			background:#222529;
+			color:#fff;
+			height:30px;
+			border-radius:5px;
+			width:100%;
 		}
 		div[class^="swatch-opt-"] .swatch-attribute {
 			margin-bottom: 0;
@@ -6834,10 +6846,9 @@ body:not(.page-layout-1column) {
 				display: none;
 			}
 			> .control .input-text.qty {
-				width: 115px;
-				border: 0;
+				width: 100px;
+				border: 1px solid #e7e7e7;
 				height: 40px;
-				background: none;
 				padding: 0;
 				font-size: 16px;
 				color: #444;
@@ -6861,7 +6872,7 @@ body:not(.page-layout-1column) {
 			height: 40px;
 			width: 40px;
 			background-color: #fff;
-			border: 1px solid #e8e8e8;
+			border: 1px solid #e7e7e7;
 			color: #222;
 			font-size: 20px;
 			text-align: center;
@@ -6907,19 +6918,16 @@ body:not(.page-layout-1column) {
 		span.edit-qty {
 			display: block;
 			text-align: center;
-			font-size: 20px;
 			color: #444;
-			line-height: 0.6;
 			position: absolute;
-			top: 8px;
-			left: 16px;
+			top: 1px;
+			left: 0px;
 			cursor: pointer;
-			border-radius:50%;
-			padding:6px;
-			background:#f2f2f2;
+			padding:7px;
+			background:#e7e7e7;
 			&.plus {
 				left: auto;
-				right: 16px;
+				right: 0px;
 			}
 		}
 	}
