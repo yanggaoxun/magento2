@@ -42,12 +42,14 @@
 			
 		</a>
 		<ul class="actions-link">
+
 			<?php // QuickView  ?>
+            <!--
 			<li class="hidden-sm hidden-xs">
 				<?php $quickViewHelper = $this->helper('MGS\QuickView\Helper\Data'); ?>
 				<?php echo $quickViewHelper->aroundQuickViewHtml($_product); ?>
 			</li>
-			
+			-->
 			<?php // Wishlist  ?>
 			<?php if ($this->helper('Magento\Wishlist\Helper\Data')->isAllow() && !$themeSettings['catalog']['wishlist_button']): ?>
 				<li>

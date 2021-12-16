@@ -140,6 +140,9 @@
 			<?php if ($_product->isSaleable()): ?>
 				<?php if ($themeHelper->getStoreConfig('mpanel/catalog/hover') != 'template-2' ) : ?>
 					<div>
+                        <?php $quickViewHelper = $this->helper('MGS\QuickView\Helper\Data'); ?>
+                        <?php echo $quickViewHelper->aroundQuickViewHtml($_product); ?>
+                        <!--
 						<?php $postParams = $block->getAddToCartPostParams($_product); ?>
 						<form data-role="tocart-form" action="<?php /* @escapeNotVerified */ echo $this->getUrl('checkout/cart/add', ['uenc'=>$postParams['data']['uenc'], 'product'=>$postParams['data']['product']]); ?>" method="post">
 							<input type="hidden" name="product" value="<?php /* @escapeNotVerified */ echo $postParams['data']['product']; ?>">
@@ -165,6 +168,8 @@
 								</button>
 							<?php endif; ?>
 						</form>
+						-->
+
 					</div>
 				<?php endif ?>
 			<?php endif ?>
@@ -256,11 +261,4 @@
 			<?php endif ?>
 		<?php endif ?>
 	</div>
-    <!-- roy  start -->
-
-        <?php $quickViewHelper = $this->helper('MGS\QuickView\Helper\Data'); ?>
-        <?php echo $quickViewHelper->aroundQuickViewHtml($_product); ?>
-
-
-    <!-- roy  end -->
 </div>
