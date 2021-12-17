@@ -4551,7 +4551,7 @@ body:not(.page-layout-1column) .category-product-actions .toolbar.toolbar-produc
 }
 
 .opc-wrapper {
-	width: 66.66666667%;
+	width: 48%;
 	float: left;
 	padding-right: 15px;
 	&:before {
@@ -4570,8 +4570,8 @@ body:not(.page-layout-1column) .category-product-actions .toolbar.toolbar-produc
 	}
 }
 .opc-sidebar.opc-summary-wrapper {
-	width: 33.33333333%;
-	float: left;
+	width: 42%;
+	float: right;
 	padding-left: 15px;
 }
 
@@ -4682,21 +4682,17 @@ body:not(.page-layout-1column) .category-product-actions .toolbar.toolbar-produc
 	margin-top: 25px;
 	text-align: right;
 	.action, button.action {
-		min-width: 200px;
+		min-width: 120px;
 		text-align: center;
 		padding: 9px 20px;
-		background-color: @base-color;
-		border: 1px solid @base-color;
+		background-color: #222529;
+		border: 1px solid #222529;
 		text-transform: uppercase;
 		font-size: 15px;
 		letter-spacing: 0.1em;
 		color: #fff;
-		.border-radius(40px);
+		.border-radius(5px);
         height: auto;
-		&:hover {
-			background-color: #1a1a1a;
-			border-color: #1a1a1a;
-		}
 	}
 }
 
@@ -4969,9 +4965,9 @@ form.payments > .fieldset {
 				&.grand {
 					th, td {
 						font-size: 18px;
-						color: @base-color;
+						color: #222529;
 						strong {
-							color: @base-color;
+							color: #222529;
 							font-weight: 500;
 						}
 					}
@@ -5083,7 +5079,7 @@ form.payments > .fieldset {
 			color: #6c6c6c;
 			border: 1px solid #e6e6e6;
 			background-color: #fff;
-			.border-radius(40px);
+			.border-radius(5px);
 			&:hover {
 				color: #fff;
 				border: 1px solid #1a1a1a;
@@ -13082,6 +13078,26 @@ body .header-mobile-tabs--bottom {
 	}
 }
 @media(min-width: 769px){
+	.checkout-container{
+		width:80%;
+		margin:0 auto;
+		#delivery-method-selector{
+			margin-bottom: 30px;
+			button{
+				width:120px;
+				height:36px;
+				border-radius:5px;
+				background:#fff;
+				color:#777;
+				border:1px solid #d7d7d7;
+				&.selected{
+					border:1px solid #222529;
+					background:#222529;
+					color:#fff;
+				}
+			}
+		}
+	}
 	.cart-container{
 		.form-cart{
 			width:75%;
