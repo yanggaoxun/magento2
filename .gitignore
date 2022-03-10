@@ -3,13 +3,17 @@
 /.metadata
 /.project
 /.settings
-app/.DS_Store
-app/code/.DS_Store
-.DS_Store
+
 
 /generated/*
 /pub/*
 /var/*
 /vendor/*
-
 /app/etc/*
+
+
+.DS_Store
+**/.DS_Store
+.DS_Store?
+
+.idea/*
