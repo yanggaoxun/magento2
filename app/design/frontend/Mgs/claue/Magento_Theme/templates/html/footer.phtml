@@ -35,12 +35,8 @@
         <div class="bottom-footer">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-7 col-sm-12 col-xs-12 copyright">
+                    <div class="copyright">
                         <address><?php /* @escapeNotVerified */ echo $block->getCopyright() ?></address>
-                    </div>
-                    <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
-                        <!-- Static block: footer_block_menu_bottom -->
-                        <?php echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId('footer_block_menu_bottom')->setCanUsePanel($canUsePanel)->toHtml() ?>
                     </div>
                 </div>
             </div>
